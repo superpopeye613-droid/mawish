@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Story - Nanda & Alif</title>
+    <link rel="stylesheet" href="nanda.css">
+</head>
+<body>
+
+    <!-- BACKGROUND MUSIC -->
+    <audio id="bgMusic" src="nanda.mp3" autoplay loop></audio>
+    <button id="musicBtn">🔊</button>
+
+    <!-- FALLING HEARTS EFFECT -->
+    <div id="heartContainer"></div>
+
+    <!-- LOGIN PAGE -->
+    <div class="login-container" id="loginPage">
+        <h2>❤️ Login Cinta ❤️</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="loginBtn">Masuk </button>
+    </div>
+
+    <!-- MAIN APP -->
+    <div id="appPage" class="app-container" style="display:none;">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+            <h2>📁 Menu Cinta Kita</h2>
+            
+            <!-- MENU BUTTONS (DASHBOARD) -->
+            <button class="menu-btn" onclick="showPage('dashboard')">🏠 Dashboard</button>
+            <button class="menu-btn" onclick="showPage('timeline')">📜 Timeline</button>
+            <button class="menu-btn" onclick="showPage('loveNotes')">💌 Love Notes</button>
+            <button class="menu-btn" onclick="showPage('questionsPage')">❓ Jawab Pertanyaan</button>
+            <button class="menu-btn" onclick="showPage('myAnswers')">📝 Jawabanku</button>
+            <button class="menu-btn" onclick="showPage('slideshow')">🎞️ Slideshow</button>
+
+            <!-- ADMIN MENU (Hanya untuk admin) -->
+            <div id="adminMenu" style="display:none;">
+                <div style="margin: 20px 0; border-top: 2px solid #ff4757;"></div>
+                <h2>🔧 Menu Admin</h2>
+                <button class="menu-btn admin-btn" onclick="showPage('adminQuestions')">✏️ Kelola Pertanyaan</button>
+                <button class="menu-btn admin-btn" onclick="showPage('adminAnswers')">📋 Lihat Jawaban</button>
+                <button class="menu-btn admin-btn" onclick="showPage('adminData')">📊 Kelola Data</button>
+            </div>
+
+            <!-- SEPARATOR -->
+            <div style="margin: 20px 0; border-top: 2px solid #ffadc2;"></div>
+
+            <h2>📁 Media Kita</h2>
+            
+            <!-- FOLDER FOTO -->
+            <button class="folder-btn" id="fotoFolderBtn">
+                <span class="folder-icon">📁</span>
+                Album Foto Kita (23 File)
+            </button>
+            <div class="folder-content" id="fotoFolderContent">
+                <!-- File-foto akan dimuat di sini secara dinamis -->
+            </div>
+
+            <!-- FOLDER VIDEO -->
+            <button class="folder-btn" id="videoFolderBtn">
+                <span class="folder-icon">📁</span>
+                Video Kenangan (10 File)
+            </button>
+            <div class="folder-content" id="videoFolderContent">
+                <!-- File-video akan dimuat di sini secara dinamis -->
+            </div>
+
+            <!-- FOLDER PESAN -->
+            <button class="folder-btn" id="pesanFolderBtn">
+                <span class="folder-icon">📁</span>
+                Pesan Rahasia
+            </button>
+            <div class="folder-content" id="pesanFolderContent">
+                <!-- Pesan-pesan akan dimuat di sini -->
+            </div>
+
+            <!-- FOLDER SECRET VIDEO -->
+            <button class="folder-btn" id="secretFolderBtn">
+                <span class="folder-icon">🔒</span>
+                Video Rahasia
+            </button>
+            <div class="folder-content" id="secretFolderContent">
+                <!-- Video rahasia akan dimuat di sini -->
+            </div>
+
+            <!-- LOGOUT BUTTON -->
+            <button class="menu-btn logout" id="logoutBtn">Logout</button>
+
+        </div>
+
+        <!-- CONTENT AREA -->
+        <div class="content">
+
+            <!-- DASHBOARD -->
+            <div id="dashboard" class="page">
+                <h1>💞 Cerita Cinta Nanda & Alif 💞</h1>
+                <div class="love-card">
+                    <p><strong>Tanggal Jadian:</strong> 13 Desember 2024</p>
+                    <p><strong>HAII SAYANGG....</strong></p>
+                    <p><strong>Kisah kita emang bukan kisah yang bisa jadi contoh buat orang</strong></p>
+                    <p><strong>kisah kita emang ga selalu baik baik aja</strong></p>
+                    <p><strong>tapi.. akuu ingett samaa kataa kataa "BAHAGIA ITU DIBUAT BUKAN DICARI"</strong></p>
+                    <p><strong>dan benarr ternyataa akuu bahagiaa samaa kamuu</strong></p>
+                    <p><strong>sayang...makasihh yaaa udahh hadirrr dii singkatnyaa hidupkuu inii</strong></p>
+                    <p><strong>Instagram:</strong> 
+                        <a href="https://www.instagram.com/dearlynnda_/">@ndaa</a> , <a href="https://www.instagram.com/leozboy_/">@alee</a> & <a href="https://www.instagram.com/justnextt/">@US</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- TIMELINE PAGE -->
+            <div id="timeline" class="page" style="display:none;">
+                <h1>📜 Timeline Cerita Cinta</h1>
+                <div class="timeline">
+                    <div class="event">
+                        <h3>Awal Aku berani chat kamu ❤️</h3>
+                        <p>Jum'at 22 November 2024</p>
+                        <p>Kita pertama kali kenal karna aku tanya anak anak smanit</p>
+                        <p>dan ternyata kamu temen sekelas anak didik pelatih aku</p>
+                        <p>disitu awal kita saling chatan dan saling cerita satu sama lain</p>
+                    </div>
+                    <div class="event">
+                        <h3>Pertama Kalii kitaa kerumahh akuuu 💕</h3>
+                        <p>Minggu 22 Desember 2024</p>
+                        <p>Hari itu kamu cantik banget,perempuann tercantikk dalamm hiduppkuu</p>
+                    </div>
+                    <div class="event">
+                        <h3>Jadian 🥺</h3>
+                        <p>Jum'at 13 Desember 2024 — hari paling indah.</p>
+                        <p>Hari dimana aku bisa memiliki wanita paling indah wajahnya dan paling manis senyumnyaa</p>
+                    </div>
+                    <div class="event">
+                        <h3>Perjalanan Cinta Kita ✨</h3>
+                        <p>Dan cerita ini masih terus kita tulis...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOVE NOTES GENERATOR -->
+            <div id="loveNotes" class="page" style="display:none;">
+                <h1>💌 Love Notes Generator</h1>
+                <div class="love-notes-container">
+                    <div class="notes-header">
+                        <p>Klik tombol di bawah untuk mendapatkan pesan cinta spesial!</p>
+                    </div>
+                    
+                    <div class="notes-display">
+                        <div class="note-paper" id="noteDisplay">
+                            <div class="note-content">
+                                <p class="note-text">Klik "Generate Love Note" untuk mendapatkan pesan cinta spesial!</p>
+                                <p class="note-signature">- Untuk Nanda & Alif -</p>
+                            </div>
+                        </div>
+                        
+                        <div class="notes-actions">
+                            <button class="notes-btn generate-btn" id="generateNote">
+                                <span>✨</span> Generate Love Note
+                            </button>
+                            <button class="notes-btn copy-btn" id="copyNote">
+                                <span>📋</span> Copy Pesan
+                            </button>
+                            <button class="notes-btn save-btn" id="saveNote">
+                                <span>💾</span> Simpan
+                            </button>
+                        </div>
+                        
+                        <div class="notes-history">
+                            <h3>📝 History Love Notes</h3>
+                            <div class="history-list" id="notesHistory">
+                                <!-- History notes akan muncul di sini -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JAWAB PERTANYAAN CINTA (untuk user) -->
+            <div id="questionsPage" class="page" style="display:none;">
+                <h1>❓ Jawab Pertanyaan Cinta</h1>
+                <div class="answer-container">
+                    <div class="answer-info">
+                        <p>Jawab pertanyaan-pertanyaan spesial tentang hubungan kita. Jawabanmu hanya bisa dilihat oleh admin.</p>
+                        <div class="answer-stats">
+                            <span>Total: <strong id="questionsCount">0</strong> Pertanyaan</span>
+                            <span>Telah dijawab: <strong id="answeredCount">0</strong></span>
+                            <span>Belum dijawab: <strong id="unansweredCount">0</strong></span>
+                        </div>
+                    </div>
+                    
+                    <div class="questions-answer-list" id="questionsAnswerList">
+                        <!-- Daftar pertanyaan untuk dijawab akan dimuat di sini -->
+                    </div>
+                    
+                    <div class="answer-actions">
+                        <button class="answer-submit-btn" id="submitAllAnswers">
+                            <span>💾</span> Simpan Semua Jawaban
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JAWABANKU (untuk user melihat jawaban sendiri) -->
+            <div id="myAnswers" class="page" style="display:none;">
+                <h1>📝 Jawabanku</h1>
+                <div class="my-answers-container">
+                    <div class="my-answers-info">
+                        <p>Lihat semua jawaban yang sudah kamu berikan. Hanya kamu yang bisa melihat jawabanmu.</p>
+                        <div class="my-answers-stats">
+                            <span>Total Pertanyaan: <strong id="myTotalQuestions">0</strong></span>
+                            <span>Sudah Dijawab: <strong id="myAnsweredCount">0</strong></span>
+                            <span>Persentase: <strong id="myPercentage">0%</strong></span>
+                        </div>
+                    </div>
+                    
+                    <div class="my-answers-list" id="myAnswersList">
+                        <!-- Daftar jawaban user akan dimuat di sini -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADMIN: KELOLA PERTANYAAN -->
+            <div id="adminQuestions" class="page" style="display:none;">
+                <h1>✏️ Kelola Pertanyaan Cinta (Admin)</h1>
+                <div class="admin-container">
+                    <div class="admin-controls">
+                        <button class="admin-action-btn" id="addQuestionBtn">
+                            <span>➕</span> Tambah Pertanyaan Baru
+                        </button>
+                        <button class="admin-action-btn" id="saveAllBtn">
+                            <span>💾</span> Simpan Semua Perubahan
+                        </button>
+                        <button class="admin-action-btn" onclick="showPage('adminAnswers')">
+                            <span>📋</span> Lihat Jawaban User
+                        </button>
+                        <button class="admin-action-btn" onclick="showPage('questionsPage')">
+                            <span>👁️</span> Lihat Mode User
+                        </button>
+                    </div>
+                    
+                    <div class="questions-editor">
+                        <div class="questions-list-admin" id="questionsListAdmin">
+                            <!-- Daftar pertanyaan untuk edit akan dimuat di sini -->
+                        </div>
+                    </div>
+                    
+                    <div class="admin-help">
+                        <h3>📋 Petunjuk:</h3>
+                        <ul>
+                            <li>Klik "Tambah Pertanyaan Baru" untuk menambah pertanyaan</li>
+                            <li>Edit langsung di kotak pertanyaan</li>
+                            <li>Klik 🗑️ untuk menghapus pertanyaan</li>
+                            <li>Klik "Simpan Semua Perubahan" untuk menyimpan</li>
+                            <li>Jawaban user dapat dilihat di "Lihat Jawaban User"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADMIN: LIHAT JAWABAN USER -->
+            <div id="adminAnswers" class="page" style="display:none;">
+                <h1>📋 Jawaban Pengguna (Admin)</h1>
+                <div class="admin-answers-container">
+                    <div class="admin-answers-controls">
+                        <div class="filter-controls">
+                            <select id="filterUser" class="filter-select">
+                                <option value="all">Semua Pengguna</option>
+                                <!-- Daftar user akan dimuat di sini -->
+                            </select>
+                            <select id="filterQuestion" class="filter-select">
+                                <option value="all">Semua Pertanyaan</option>
+                                <!-- Daftar pertanyaan akan dimuat di sini -->
+                            </select>
+                            <button class="filter-btn" id="refreshAnswers">
+                                <span>🔄</span> Refresh
+                            </button>
+                        </div>
+                        
+                        <div class="export-controls">
+                            <button class="export-btn" id="exportAnswersBtn">
+                                <span>📥</span> Export Jawaban
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="answers-stats">
+                        <div class="answer-stat-card">
+                            <h3>👥 Total User</h3>
+                            <p class="answer-stat-number" id="totalUsers">0</p>
+                        </div>
+                        <div class="answer-stat-card">
+                            <h3>❓ Total Pertanyaan</h3>
+                            <p class="answer-stat-number" id="totalQuestions">0</p>
+                        </div>
+                        <div class="answer-stat-card">
+                            <h3>📝 Total Jawaban</h3>
+                            <p class="answer-stat-number" id="totalAnswers">0</p>
+                        </div>
+                        <div class="answer-stat-card">
+                            <h3>📊 Rata-rata Jawaban</h3>
+                            <p class="answer-stat-number" id="avgAnswers">0%</p>
+                        </div>
+                    </div>
+                    
+                    <div class="answers-table-container">
+                        <div class="answers-table" id="answersTable">
+                            <!-- Tabel jawaban akan dimuat di sini -->
+                            <div class="empty-state">
+                                <p>Belum ada jawaban dari pengguna.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="answers-detail" id="answerDetail">
+                        <!-- Detail jawaban akan dimuat di sini -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADMIN: KELOLA DATA -->
+            <div id="adminData" class="page" style="display:none;">
+                <h1>📊 Kelola Data Cinta (Admin)</h1>
+                <div class="admin-data-container">
+                    <div class="data-stats">
+                        <div class="stat-card">
+                            <h3>📸 Foto</h3>
+                            <p class="stat-number" id="photoCount">12</p>
+                            <p class="stat-desc">File Foto</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>🎥 Video</h3>
+                            <p class="stat-number" id="videoCount">3</p>
+                            <p class="stat-desc">File Video</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>💌 Pesan</h3>
+                            <p class="stat-number" id="messageCount">5</p>
+                            <p class="stat-desc">Pesan Rahasia</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>❓ Pertanyaan</h3>
+                            <p class="stat-number" id="questionCount">0</p>
+                            <p class="stat-desc">Pertanyaan Cinta</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>📝 Jawaban</h3>
+                            <p class="stat-number" id="answerCount">0</p>
+                            <p class="stat-desc">Jawaban User</p>
+                        </div>
+                    </div>
+                    
+                    <div class="data-actions">
+                        <div class="action-card">
+                            <h3>🔄 Backup Data</h3>
+                            <p>Simpan semua data ke file JSON</p>
+                            <button class="data-action-btn" id="backupDataBtn">📥 Backup Sekarang</button>
+                        </div>
+                        
+                        <div class="action-card">
+                            <h3>🧹 Reset Data</h3>
+                            <p>Hapus semua data pertanyaan & jawaban</p>
+                            <button class="data-action-btn reset-btn" id="resetQuestionsBtn">🗑️ Reset Pertanyaan</button>
+                            <button class="data-action-btn reset-btn" id="resetAnswersBtn">🗑️ Reset Jawaban</button>
+                        </div>
+                        
+                        <div class="action-card">
+                            <h3>📤 Export</h3>
+                            <p>Export data untuk dibagikan</p>
+                            <button class="data-action-btn" id="exportDataBtn">📤 Export Data</button>
+                            <button class="data-action-btn" id="exportAnswersCsvBtn">📤 Export CSV</button>
+                        </div>
+                    </div>
+                    
+                    <div class="data-preview">
+                        <h3>👀 Preview Data</h3>
+                        <div class="preview-content">
+                            <textarea id="dataPreview" readonly placeholder="Data akan muncul di sini..."></textarea>
+                            <button class="preview-btn" id="refreshPreviewBtn">🔄 Refresh Preview</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHOTO SLIDESHOW -->
+            <div id="slideshow" class="page" style="display:none;">
+                <h1>🎞️ Photo Slideshow Kenangan Kita</h1>
+                <div class="slideshow-container">
+                    <div class="slideshow-controls">
+                        <button class="slideshow-btn" id="prevSlide">⏮️</button>
+                        <button class="slideshow-btn play-btn" id="playPause">▶️</button>
+                        <button class="slideshow-btn" id="nextSlide">⏭️</button>
+                        <select class="speed-select" id="speedSelect">
+                            <option value="3000">Lambat</option>
+                            <option value="2000" selected>Normal</option>
+                            <option value="1000">Cepat</option>
+                        </select>
+                    </div>
+                    
+                    <div class="slideshow-viewer">
+                        <div class="slide" id="currentSlide">
+                            <img src="" alt="Foto Kenangan" id="slideImage">
+                            <div class="slide-info">
+                                <h3 id="slideTitle">Memories of Us</h3>
+                                <p id="slideDesc">Loading memories...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="slide-counter">
+                            <span id="currentSlideNumber">1</span> / <span id="totalSlides">12</span>
+                        </div>
+                    </div>
+                    
+                    <div class="slideshow-thumbnails">
+                        <h3>📸 Daftar Foto</h3>
+                        <div class="thumbnails-container" id="thumbnailsContainer">
+                            <!-- Thumbnails akan dimuat di sini -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- LIGHTBOX POPUP -->
+    <div id="lightbox">
+        <button id="closeLightbox">✖</button>
+        <div id="lightboxContent"></div>
+    </div>
+
+<script src="nanda.js"></script>
+</body>
+</html>
